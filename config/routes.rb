@@ -55,6 +55,7 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  match ':controller(/:action(/:id))' => 'states#filter', via: [:get, :post]
+  match 'state(/filter(/:substring))' => 'state#filter', via: [:get, :post]
+  get 'tabs/show2' => 'tabs#show2'
 
 end
