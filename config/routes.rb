@@ -55,7 +55,6 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  get ':controller(/:action(/:id))'
-  post ':controller(/:action(/:id))'
+  match ':controller(/:action(/:id))' => 'states#filter', via: [:get, :post]
 
 end
